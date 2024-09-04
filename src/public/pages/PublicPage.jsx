@@ -4,14 +4,14 @@ import Navbar from "../components/Navbar";
 export default function PublicPage() {
   return (
     <>
-      <article className="h-full public_gradient ">
+      <article className="h-full sm:h-screen  public_gradient ">
         <Navbar />
 
-        <section className="grid lg:grid-cols-2    overflow-x-hidden">
-          <div className="px-6 flex flex-col  pt-10 ">
+        <section className="grid lg:grid-cols-2  lg:h-full  overflow-x-hidden">
+          <div className=" px-6 flex flex-col lg:justify-center pt-10 lg:-mt-20  ">
             <span className="text-gray-400 mb-3">Sistema v1.0 {">"}</span>
 
-            <h1 className="mb-4 text-3xl font-extrabold text-gray-100  md:text-5xl lg:text-5xl">
+            <h1 className="mb-4 text-3xl font-extrabold text-gray-100  md:text-5xl xl:text-6xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-sky-600">
                 Sistema Gestion <br />
               </span>
@@ -49,9 +49,9 @@ export default function PublicPage() {
               </Link>
             </div>
           </div>
-          <div className=" flex justify-end items-center ">
+          <div className=" flex justify-end  items-center ">
             <img
-              className="h-[85%] rounded-s-lg -mr-20 sm:m-0 "
+              className="h-[85%] lg:h-[50%] xl:h-[60%] rounded-s-lg -mr-20 sm:m-0 "
               src="./ReparaCelHero.png"
               alt=""
             />

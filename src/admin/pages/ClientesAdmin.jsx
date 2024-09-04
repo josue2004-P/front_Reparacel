@@ -1,3 +1,4 @@
+import { useClienteStore } from "../../hooks";
 import {
   Sidebar,
   InputSearch,
@@ -9,18 +10,7 @@ import {
 } from "../components";
 
 export default function ClientesAdmin() {
-  const clientes = [
-    {
-      id: 1,
-      nombre: "Josue Perez Leon",
-      telefono: 2841022581,
-    },
-    {
-      id: 2,
-      nombre: "Naomi Deka",
-      telefono: 2841022581,
-    },
-  ];
+  const { clientes } = useClienteStore();
 
   return (
     <>
@@ -35,7 +25,7 @@ export default function ClientesAdmin() {
           <InputSearch />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {clientes.map((items,i) => (
+            {clientes.map((items, i) => (
               <CardCliente items={items} key={i} />
             ))}
           </div>

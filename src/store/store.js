@@ -3,6 +3,7 @@ import {
   authSlice,
   uiSlice,
   equipoSlice,
+  clienteSlice,
 } from "./";
 
 export const store = configureStore({
@@ -10,6 +11,7 @@ export const store = configureStore({
     auth: authSlice.reducer,
     ui: uiSlice.reducer,
     equipo: equipoSlice.reducer,
+    cliente: clienteSlice.reducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
