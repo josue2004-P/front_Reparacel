@@ -5,5 +5,7 @@ export {default as ClientesAdmin} from './pages/ClientesAdmin'
 export {default as InfoCliente} from './pages/Clientes/InfoCliente'
 
 export {default as ReparacionesAdmin} from './pages/ReparacionesAdmin'
+export {default as InfoReparacion} from './pages/Reparaciones/InfoReparacion'
+
 
 

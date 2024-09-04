@@ -5,6 +5,7 @@ import {
   EquiposAdmin,
   HomeAdmin,
   InfoCliente,
+  InfoReparacion,
   ReparacionesAdmin,
 } from "../admin";
 import { PublicPage } from "../public";
@@ -20,6 +21,8 @@ export const AppRouter = () => {
         <Route path="/clientes/info-cliente/:id" element={<InfoCliente />} />
 
         <Route path="/reparaciones" element={<ReparacionesAdmin />} />
+        <Route path="/reparaciones/info-reparacion/:id" element={<InfoReparacion />} />
+
 
         {/* <Route path="/*" element={<Navigate to="/" />} /> */}
       </>
