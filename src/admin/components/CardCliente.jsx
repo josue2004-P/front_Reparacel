@@ -7,7 +7,7 @@ export default function CardCliente({ items }) {
   return (
     <div className="shadow-md rounded-md">
       <div className="px-6 py-3 font-semibold ">
-        <h2>{nombre}</h2>
+        <h2 className="text-sky-600">{nombre}</h2>
         <span className="text-xs text-gray-500">{telefono}</span>
       </div>
       <div className="border-t grid grid-cols-2 font-semibold">

@@ -6,27 +6,10 @@ import {
   Thead,
   Tbody,
 } from "../components";
+import { equipoReparaciones } from "../../data/equipoReparaciones"
 
 export default function ReparacionesAdmin() {
 
-  const equipoReparacion = [
-    {
-      id:1,
-      nombre:"G7 Play",
-      nombre_cliente:"Josue Perez Leon",
-      detalle:"No Prende",
-      fecha_ingreso:"03-10-2004",
-      status:"Revision"
-    },
-    {
-      id:2,
-      nombre:"G9 Play",
-      nombre_cliente:"Josue Perez Leon",
-      detalle:"No Prende",
-      fecha_ingreso:"03-10-2004",
-      status:"Pendiente"
-    }
-  ]
 
   return (
     <>
@@ -44,15 +27,16 @@ export default function ReparacionesAdmin() {
             {/* Thead */}
             <Thead>
               <tr>
+              <th scope="col" className="px-6 py-3">
+                ID
+                </th>
                 <th scope="col" className="px-6 py-3">
                   Nombre
                 </th>
                 <th scope="col" className="px-6 py-3">
                   Nombre Cliente
                 </th>
-                <th scope="col" className="px-6 py-3">
-                  Detalle
-                </th>
+
                 <th scope="col" className="px-6 py-3">
                   Fecha Ingreso
                 </th>
@@ -66,7 +50,7 @@ export default function ReparacionesAdmin() {
             </Thead>
 
             {/* Tbody */}
-            <Tbody datoReparacion={equipoReparacion}/>
+            <Tbody datoReparacion={equipoReparaciones}/>
           </table>
 
 

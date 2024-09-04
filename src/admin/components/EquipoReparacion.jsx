@@ -1,21 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function EquipoReparacion({ equipoReparacion }) {
-  const { nombre, nombre_cliente, detalle, fecha_ingreso, status } =
+  const {id, nombre, nombre_cliente, detalle, fecha_ingreso, status } =
     equipoReparacion;
 
   return (
     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+      <td className="px-6 py-4">{id}</td>
+
       <th
         scope="row"
         className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
       >
         <div className="">
-          <div className="text-base font-semibold">{nombre}</div>
+          <div className="text-sky-600 text-base font-semibold">{nombre}</div>
         </div>
       </th>
       <td className="px-6 py-4">{nombre_cliente}</td>
-      <td className="px-6 py-4">{detalle}</td>
       <td className="px-6 py-4">{fecha_ingreso}</td>
       <td className="px-6 py-4">
         <div className="flex items-center">
@@ -38,13 +40,14 @@ export default function EquipoReparacion({ equipoReparacion }) {
         </div>
       </td>
       <td className="px-6 py-4 flex flex-col">
-        <a
+        <Link
           // href="#"
+          to={`/reparaciones/info-reparacion/${id}`}
           type="button"
           className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
         >
           Detalles 
-        </a>
+        </Link>
       </td>
     </tr>
   );
