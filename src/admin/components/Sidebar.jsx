@@ -1,12 +1,36 @@
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { useUiStore } from "../../hooks";
 
 export default function Sidebar() {
+  const { isSidebarOpen, toogleSidebar } = useUiStore();
+  const sidebarRef = useRef(null);
+
+  const handleSidebar = () => {
+    toogleSidebar();
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isSidebarOpen &&
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target)
+      ) {
+        toogleSidebar();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isSidebarOpen, toogleSidebar]); // Añade isSidebarOpen y toogleSidebar al array de dependencias
+
   return (
     <>
       <button
-        data-drawer-target="cta-button-sidebar"
-        data-drawer-toggle="cta-button-sidebar"
-        aria-controls="cta-button-sidebar"
+        onClick={() => handleSidebar()}
         type="button"
         className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       >
@@ -31,15 +55,19 @@ export default function Sidebar() {
       </button>
 
       <aside
-        id="cta-button-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-        aria-label="Sidebar"
+        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform sm:translate-x-0  ${
+          isSidebarOpen ? "" : "-translate-x-full"
+        }`}
       >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div
+          ref={sidebarRef}
+          className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800"
+        >
           <ul className="space-y-2 font-medium">
             <li>
               <Link
-              to={"/dashboard"}
+                onClick={() => handleSidebar()}
+                to={"/dashboard"}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -58,6 +86,7 @@ export default function Sidebar() {
             <li>
               <Link
                 to={"/equipos"}
+                onClick={() => handleSidebar()}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -84,6 +113,7 @@ export default function Sidebar() {
             <li>
               <Link
                 to={"/clientes"}
+                onClick={() => handleSidebar()}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -101,6 +131,7 @@ export default function Sidebar() {
             <li>
               <Link
                 to={"/reparaciones"}
+                onClick={() => handleSidebar()}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -125,6 +156,7 @@ export default function Sidebar() {
             </li>
             <li>
               <a
+                onClick={() => handleSidebar()}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
@@ -152,6 +184,7 @@ export default function Sidebar() {
             <li>
               <Link
                 to={"/"}
+                onClick={() => handleSidebar()}
                 className="flex items-center p-2 text-gray-900 rounded-lg  bg-gray-100 "
               >
                 <svg

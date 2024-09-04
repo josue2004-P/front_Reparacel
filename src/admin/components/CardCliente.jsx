@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom"
 
 export default function CardCliente({ items }) {
 
-    const {nombre,telefono} = items
+    const {id,nombre,telefono} = items
 
   return (
     <div className="shadow-md rounded-md">
@@ -10,7 +11,9 @@ export default function CardCliente({ items }) {
         <span className="text-xs text-gray-500">{telefono}</span>
       </div>
       <div className="border-t grid grid-cols-2 font-semibold">
-        <div className="text-center px-4 py-2 border-r flex justify-center items-center gap-2">
+        <Link 
+        to={`/clientes/info-cliente/${id}`}
+        className="text-center px-4 py-2 border-r flex justify-center items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={20}
@@ -29,7 +32,7 @@ export default function CardCliente({ items }) {
             <path d="M11 12h1v4h1" />
           </svg>
           <span>Info</span>
-        </div>
+        </Link>
 
         <div className="text-center px-4 py-2 flex justify-center items-center gap-2">
           <svg

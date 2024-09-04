@@ -42,7 +42,28 @@ export default function ReparacionesAdmin() {
 
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             {/* Thead */}
-            <Thead />
+            <Thead>
+              <tr>
+                <th scope="col" className="px-6 py-3">
+                  Nombre
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Nombre Cliente
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Detalle
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Fecha Ingreso
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Status
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Opciones
+                </th>
+              </tr>
+            </Thead>
 
             {/* Tbody */}
             <Tbody datoReparacion={equipoReparacion}/>
