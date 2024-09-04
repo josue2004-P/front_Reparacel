@@ -6,6 +6,9 @@ export const uiSlice = createSlice({
     //TOOGLE NAVBAR
     isSidebarOpen: false,
 
+    //NAVBAR
+    isNavbarOpen: false,
+
     // UPDATE PRODCUTO
     isProductoUpdateModalOpen: false,
 
@@ -16,6 +19,11 @@ export const uiSlice = createSlice({
   reducers: {
     onToogleSidebar: (state) => {
       state.isSidebarOpen = !state.isSidebarOpen;
+    },
+
+    // NAVBAR
+    onToogleNavbar: (state) => {
+      state.isNavbarOpen = !state.isNavbarOpen;
     },
     // PRODUCTO
     onOpenProductoUpdateModal: (state) => {
@@ -38,6 +46,7 @@ export const uiSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const {
   onToogleSidebar,
+  onToogleNavbar,
 
   onOpenProductoUpdateModal,
   onCloseProductoUpdateModal,

@@ -13,10 +13,10 @@ export default function Equipo({ equipo }) {
   };
 
   return (
-    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+    <tr className="bg-white border-b ">
       <th
         scope="row"
-        className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+        className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap "
       >
         <div className="">
           <div className="text-base text-sky-600 font-semibold">{nombre}</div>
@@ -29,14 +29,14 @@ export default function Equipo({ equipo }) {
         <button
           onClick={handleAdminPermission}
           type="button"
-          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+          className="font-medium text-blue-600 "
         >
           Editar equipo
         </button>
         <button
           onClick={handleAdminPermission}
           type="button"
-          className="font-medium text-red-600 dark:text-blue-500 hover:underline"
+          className="font-medium text-red-600 "
         >
           Eliminar equipo
         </button>
