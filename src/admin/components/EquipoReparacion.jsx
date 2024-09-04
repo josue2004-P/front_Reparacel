@@ -14,7 +14,7 @@ export default function EquipoReparacion({ equipoReparacion }) {
         className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
       >
         <div className="">
-          <div className="text-base font-semibold">{nombre}</div>
+          <div className="text-sky-600 text-base font-semibold">{nombre}</div>
         </div>
       </th>
       <td className="px-6 py-4">{nombre_cliente}</td>

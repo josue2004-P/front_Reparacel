@@ -32,7 +32,7 @@ export default function HomeAdmin() {
                 <span className="text-xs text-gray-600 font-medium">
                   Pendientes
                 </span>
-                <span className="font-semibold text-4xl">{reparacionesPendientes}</span>
+                <span className="text-purple-600 font-semibold text-4xl">{reparacionesPendientes}</span>
               </div>
             </div>
             <div className="">
@@ -40,7 +40,7 @@ export default function HomeAdmin() {
                 <span className="text-xs text-gray-600 font-medium">
                   Reparaciones
                 </span>
-                <span className="font-semibold text-4xl">{equipoReparaciones.length}</span>
+                <span className="text-purple-600 font-semibold text-4xl">{equipoReparaciones.length}</span>
               </div>
             </div>
             <div className=" ">
@@ -48,7 +48,7 @@ export default function HomeAdmin() {
                 <span className="text-xs text-gray-600 font-medium">
                   Equipos
                 </span>
-                <span className="font-semibold text-4xl">{equipos.length}</span>
+                <span className="text-purple-600 font-semibold text-4xl">{equipos.length}</span>
               </div>
             </div>
             <div className="">
@@ -56,7 +56,7 @@ export default function HomeAdmin() {
                 <span className="text-xs text-gray-600 font-medium">
                   Clientes
                 </span>
-                <span className="font-semibold text-4xl">{clientes.length}</span>
+                <span className="text-purple-600 font-semibold text-4xl">{clientes.length}</span>
               </div>
             </div>
           </section>
@@ -65,7 +65,7 @@ export default function HomeAdmin() {
         <article className="grid  lg:grid-cols-4 gap-4 mt-4">
           <div className="rounded-md shadow-md col-span-2 p-4">
             <header>
-              <h2 className="font-bold text-lg">Clientes frecuentes</h2>
+              <h2 className="text-sky-600 font-bold text-lg">Clientes frecuentes</h2>
             </header>
             <ul role="list" className="divide-y divide-gray-100">
               {clientes.map((items, i) => (
@@ -95,7 +95,7 @@ export default function HomeAdmin() {
 
           <div className="rounded-md shadow-md col-span-2 p-4">
             <header>
-              <h2 className="font-bold text-lg">Equipos frecuentes</h2>
+              <h2 className="text-sky-600 font-bold text-lg">Equipos frecuentes</h2>
             </header>
             <ul role="list" className="divide-y divide-gray-100">
               {equipos.map((items, i) => (

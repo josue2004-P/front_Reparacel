@@ -7,7 +7,7 @@ export default function Rutas({ ruta, clientes,reparaciones }) {
         <li>
           <Link
             to={"/dashboard"}
-            className="text-sm sm:text-base text-gray-700 font-medium"
+            className="text-sm sm:text-base text-sky-600 font-medium"
           >
             Dashboard
           </Link>

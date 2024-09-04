@@ -30,7 +30,7 @@ export default function InfoReparacion() {
         <article className="">
           <div>
             <div className="px-4 sm:px-0">
-              <h3 className="text-base font-semibold leading-7 text-gray-900">
+              <h3 className="text-base font-semibold leading-7 text-sky-600">
                 Información reparacion
               </h3>
               <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
