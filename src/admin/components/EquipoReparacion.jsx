@@ -6,12 +6,12 @@ export default function EquipoReparacion({ equipoReparacion }) {
     equipoReparacion;
 
   return (
-    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+    <tr className="bg-white border-b ">
       <td className="px-6 py-4">{id}</td>
 
       <th
         scope="row"
-        className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+        className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap "
       >
         <div className="">
           <div className="text-sky-600 text-base font-semibold">{nombre}</div>
@@ -44,7 +44,7 @@ export default function EquipoReparacion({ equipoReparacion }) {
           // href="#"
           to={`/reparaciones/info-reparacion/${id}`}
           type="button"
-          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+          className="font-medium text-blue-600 "
         >
           Detalles 
         </Link>

@@ -4,7 +4,8 @@ import {
   onOpenProductoUpdateModal,
   onCloseProductoUpdateModal,
   onOpenProductosPedidoModal,
-  onCloseProductosPedidoModal
+  onCloseProductosPedidoModal,
+  onToogleNavbar
 } from "../store";
 
 export const useUiStore = () => {
@@ -12,6 +13,7 @@ export const useUiStore = () => {
 
   const {
     isSidebarOpen,
+    isNavbarOpen,
     isProductoUpdateModalOpen,
     isProductoPedidosModalOpen,
 
@@ -20,6 +22,10 @@ export const useUiStore = () => {
   // SIDEBAR
   const toogleSidebar = () => {
     dispatch(onToogleSidebar());
+  };
+
+  const toogleNavbar = () => {
+    dispatch(onToogleNavbar());
   };
 
   // MODAL UPDATE EQUIPO
@@ -40,6 +46,7 @@ export const useUiStore = () => {
 
   return {
     isSidebarOpen,
+    isNavbarOpen,
     isProductoUpdateModalOpen,
     isProductoPedidosModalOpen,
 
@@ -51,5 +58,6 @@ export const useUiStore = () => {
     closeProductosPedidosModal,
 
     toogleSidebar,
+    toogleNavbar
   };
 };
